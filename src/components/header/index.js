@@ -3,7 +3,7 @@ import React from "react";
 export default function Header() {
   return (
     <div>
-      <h1>Header Comp</h1>
+      <h1 className="text-indigo-600">Rate Exchange</h1>
     </div>
   );
 }
