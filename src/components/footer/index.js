@@ -3,7 +3,15 @@ import React from "react";
 export default function Footer() {
   return (
     <div>
-      <h1>Footer Comp</h1>
+      <p className="font-mono text-base">
+        A project by{" "}
+        <a
+          className="text-indigo-300"
+          href="https://github.com/gtchakama/cra-rate-exchange"
+        >
+          George Chakama
+        </a>
+      </p>
     </div>
   );
 }
