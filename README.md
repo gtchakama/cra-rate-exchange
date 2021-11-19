@@ -8,7 +8,6 @@ Single Page App for currency exchange.
 2.  Dark Theme UI that can be used during the day and night
 3.  Fast Rate conversion
 
-## Hosted on Netlify(🔥):
 
 # Getting started😉:
 
