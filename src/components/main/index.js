@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
 import Axios from "axios";
-import Dropdown from "react-dropdown";
 
+//  dropdown component for React
+import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
+
 export default function Main() {
   // Initializing all the state variables
   const [info, setInfo] = useState([]);
   const [input, setInput] = useState(0);
   const [from, setFrom] = useState("usd");
-  const [to, setTo] = useState("inr");
+  const [to, setTo] = useState("aud");
   const [options, setOptions] = useState([]);
   const [output, setOutput] = useState(0);
 
-  // Calling the api when  the dependency changes
+  // Calling the api when the dependency changes
   useEffect(() => {
     Axios.get(
       `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${from}.json`
@@ -33,12 +35,17 @@ export default function Main() {
     setOutput(input * rate);
   }
 
+  //   Filtering array to show only 4 currencies
+  let filteredArr = options.filter((arrFiltered) =>
+    ["usd", "aud", "gbp", "zar"].includes(arrFiltered)
+  );
+
   return (
     <div>
       <div>
         <input
           className="form-input rounded text-indigo-500 w-full"
-          type="text"
+          type="number"
           placeholder="Enter the amount"
           onChange={(e) => setInput(e.target.value)}
         />
@@ -48,8 +55,8 @@ export default function Main() {
         <div className="flex-1">
           <span className="text-lg text-left">From</span>
           <Dropdown
-            className=" p-2 font-medium text-base"
-            options={options}
+            className=" p-2 font-medium text-base text-indigo-500"
+            options={filteredArr}
             onChange={(e) => {
               setFrom(e.value);
             }}
@@ -61,8 +68,8 @@ export default function Main() {
         <div className="flex-1 ">
           <span className="text-lg text-left">To</span>
           <Dropdown
-            className=" p-2 text-base"
-            options={options}
+            className=" p-2 text-base font-medium text-indigo-500 "
+            options={filteredArr}
             onChange={(e) => {
               setTo(e.value);
             }}
@@ -81,8 +88,8 @@ export default function Main() {
         >
           Convert
         </button>
-        <h2 className="text-lg mt-8  text-yellow-200">Converted Amount:</h2>
-        <p className="font-sans">
+        <h2 className="text-lg mt-8  text-yellow-200">Current Rate:</h2>
+        <p className="font-sans font-semibold">
           {input + " " + from + " = " + output.toFixed(2) + " " + to}
         </p>
       </div>
