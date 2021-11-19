@@ -20,11 +20,7 @@ Single Page App for currency exchange.
 
 # Screenshots📼:
 
-## Homepage
-
-![landing](landing.png)
-
-## Tutorial
+## Homepage & Tutorial
 
 ![use](tutorial.gif)
 
