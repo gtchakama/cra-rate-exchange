@@ -24,9 +24,13 @@ Single Page App for currency exchange.
 
 ![landing](landing.png)
 
+## Tutorial
+
+![use](tutorial.gif)
+
 # Tech Stack Used💡:
 
 - React JS
 - Tailwind CSS
-- API from Fawaz Ahmed 
+- API from Fawaz Ahmed
 - Axios
