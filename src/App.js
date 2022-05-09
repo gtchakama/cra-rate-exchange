@@ -1,8 +1,9 @@
 import DownloadRep from "./components/download/index";
+import Payslip from "./components/payslip";
 function App() {
   return (
     <div className="">
-      <DownloadRep />
+      <Payslip />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-function App() {
+function Payslip() {
   return (
     <div className="">
       <header className="  pt-12 px-12 pd-4">
@@ -291,4 +291,4 @@ function App() {
   );
 }
 
-export default App;
+export default Payslip;
