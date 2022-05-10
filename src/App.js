@@ -1,18 +1,9 @@
-import "./App.css";
-
-// Components
-import Header from "./components/header";
-import Main from "./components/main";
-import Footer from "./components/footer";
-
+import DownloadRep from "./components/download/index";
+import Payslip from "./components/payslip";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Header />
-        <Main />
-        <Footer />
-      </header>
+    <div className="">
+      <Payslip />
     </div>
   );
 }

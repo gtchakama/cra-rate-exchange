@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.0",
+    "@react-pdf/renderer": "^2.1.1",
+    "@statikly/funk": "^0.3.1",
     "@tailwindcss/forms": "^0.3.4",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
@@ -14,6 +16,7 @@
     "react-dropdown": "^1.9.2",
     "react-icons": "^4.3.1",
     "react-scripts": "4.0.3",
+    "react-select": "^5.3.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
